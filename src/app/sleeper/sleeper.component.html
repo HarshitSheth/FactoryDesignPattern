@@ -1,0 +1,27 @@
+<!--<div align="center">-->
+<!--  <label>Passenger Name: </label>-->
+<!--  <br><br>-->
+<!--  <input placeholder="name"/>-->
+<!--  <br><br>-->
+<!--  <button type="submit">submit</button>-->
+<!--</div>-->
+
+<form [formGroup]="messageForm" (ngSubmit)="onSubmit()">
+
+  <div align="center">
+    <label>
+      Passenger Name:
+      <input type="text" placeholder="passenger name" formControlName="passengerName">
+      <div *ngIf="submitted && messageForm.controls.passengerName.errors" class="error">
+        <div *ngIf="messageForm.controls.passengerName.errors.required">A name is required</div>
+      </div>
+    </label>
+  </div>
+
+  <div align="center">
+    <input type="submit" value="Submit" class="cta">
+  </div>
+  <img class="spinner" *ngIf="loading" src="https://smallenvelop.com/wp-content/uploads/2014/08/Preloader_8.gif">
+  <h5 class="message" *ngIf="submitted && !messageForm.controls.passengerName.errors">Making reservation...</h5>
+  <h5 class="message" *ngIf="!success || messageForm.controls.passengerName.errors">Fill details...</h5>
+</form>

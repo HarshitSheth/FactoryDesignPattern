@@ -1,0 +1,15 @@
+<div align="center">
+  <label>Select Class: </label>
+<!--  <select [(ngModel)] = "selectDropDown" (change)="select($event)">-->
+  <select (change)="select($event)">
+    <option selected disabled hidden>Choose here</option>
+    <option *ngFor="let dropDown of classChoice" [value]="dropDown.dropDownValue">{{dropDown.dropDownValue}}</option>
+  </select>
+
+  <h6>{{dropDownSelect}}</h6>
+  <app-second-tier *ngIf="dropDownSelect === 'Second Tier'"></app-second-tier>
+  <app-third-tier *ngIf="dropDownSelect === 'Third Tier'"></app-third-tier>
+  <app-general *ngIf="dropDownSelect === 'General'"></app-general>
+  <app-sleeper *ngIf="dropDownSelect === 'Sleeper'"></app-sleeper>
+
+</div>

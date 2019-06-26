@@ -1,0 +1,18 @@
+<form [formGroup]="messageForm" (ngSubmit)="onSubmit()">
+  <div align="center">
+    <label>
+      Class Name:
+      <input type="text" placeholder="class name" formControlName="className">
+      <div *ngIf="submitted && messageForm.controls.className.errors" class="error">
+        <label>A name is required</label>
+      </div>
+    </label>
+  </div>
+
+  <div align="center">
+    <input type="submit" value="Submit" class="cta">
+  </div>
+  <img class="spinner" *ngIf="loading" src="https://smallenvelop.com/wp-content/uploads/2014/08/Preloader_8.gif">
+  <h5 class="message" *ngIf="submitted && !messageForm.controls.className.errors">Getting availability...</h5>
+  <h5 class="message" *ngIf="!success || messageForm.controls.className.errors">Fill details...</h5>
+</form>

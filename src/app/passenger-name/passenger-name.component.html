@@ -1,0 +1,38 @@
+<!--<div align="center">-->
+<!--  <label>Coach Name: </label>-->
+<!--<input placeholder="coach name">-->
+<!--<br><br>-->
+<!--<label>Seat Number: </label>-->
+<!--<input placeholder="seat number">-->
+<!--<br><br>-->
+<!--<button type="submit">Submit</button>-->
+<!--</div>-->
+
+<form [formGroup]="messageForm" (ngSubmit)="onSubmit()">
+
+  <div align="center">
+    <label>
+      Coach Name:
+      <input type="text" placeholder="coach name" formControlName="coachName">
+      <div *ngIf="submitted && messageForm.controls.coachName.errors" class="error">
+        <label>A name is required</label>
+      </div>
+    </label>
+  </div>
+
+  <div align="center">
+    <label>
+      Seat Number:
+      <input placeholder="seat number" formControlName="seatNumber">
+      <div *ngIf="submitted && messageForm.controls.seatNumber.errors" class="error">
+        <label>A seat number is required</label>
+      </div>
+    </label>
+  </div>
+  <div align="center">
+    <input type="submit" value="Submit" class="cta">
+  </div>
+  <img class="spinner" *ngIf="loading" src="https://smallenvelop.com/wp-content/uploads/2014/08/Preloader_8.gif">
+  <h5 class="message" *ngIf="success && !(messageForm.controls.coachName.errors || messageForm.controls.seatNumber.errors)">Fetching passenger details...</h5>
+  <h5 class="message" *ngIf="!success || messageForm.controls.seatNumber.errors || messageForm.controls.coachName.errors">Fill details...</h5>
+</form>

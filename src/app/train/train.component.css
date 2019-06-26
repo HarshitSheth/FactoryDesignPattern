@@ -1,0 +1,88 @@
+/*li{*/
+/*  list-style-type: none;*/
+/*  list-style-position: inside;*/
+/*!*  cursor: pointer;*!*/
+/*!*  position: relative;*!*/
+/*!*  background-color: aqua;*!*/
+/*!*  margin: .2em;*!*/
+/*!*  padding: .3em 0;*!*/
+/*!*  height: 3.6em;*!*/
+/*!*  border-radius: 4px;*!*/
+/*!*  list-style: none;*!*/
+/*!*  width: 150%;*!*/
+/*!*  text-align: center;*!*/
+/*!*  font-size: large;*!*/
+/*}*/
+
+/*!*ul li::before {*!*/
+/*!*  !*float: left;*!*!*/
+/*!*  color: darkcyan;*!*/
+/*!*}*!*/
+
+/*!*button:hover{*!*/
+/*!*  color: white;*!*/
+/*!*  background-color: lightseagreen;*!*/
+/*!*  !*left: .1em;*!*!*/
+/*!*}*!*/
+
+/*!*button{*!*/
+/*!*  cursor: pointer;*!*/
+/*!*  background-color: white;*!*/
+/*!*  margin: .5em;*!*/
+/*!*  height: 3em;*!*/
+/*!*  border-radius: 8px;*!*/
+/*!*  list-style: none;*!*/
+/*!*  width: 75%;*!*/
+/*!*  padding: 0em 0 0em 10px;*!*/
+/*!*  text-align: left;*!*/
+/*!*  font-size: large;*!*/
+/*!*  position: center;*!*/
+/*!*  border: none;*!*/
+/*!*  color: black;*!*/
+/*!*}*!*/
+
+/*tr{*/
+/*  cursor: pointer;*/
+/*  background-color: white;*/
+/*  margin: .5em;*/
+/*  height: 3em;*/
+/*  border-radius: 8px;*/
+/*  list-style: none;*/
+/*  width: 75%;*/
+/*  padding: 0em 0 0em 10px;*/
+/*  text-align: left;*/
+/*  font-size: large;*/
+/*  position: center;*/
+/*  border: none;*/
+/*  color: black;*/
+/*}*/
+
+/*tr:hover{*/
+/*  color: white;*/
+/*  background-color: lightseagreen;*/
+/*  !*left: .1em;*!*/
+/*}*/
+
+/*.sidenav {*/
+/*  border-radius: 0px 8px 8px 0px;*/
+/*  border-style: solid;*/
+/*  !*height: 100%; !* Full-height: remove this if you want "auto" height *!*!*/
+/*  width: 220px; !* Set the width of the sidebar *!*/
+/*  position: fixed; !* Fixed Sidebar (stay in place on scroll) *!*/
+/*  !*z-index: 1; !* Stay on top *!*!*/
+/*  top: 150px; !* Stay at the top *!*/
+/*  left: 0;*/
+/*  border-color: #7700FF;*/
+/*  background-color: white; !* Black *!*/
+/*  overflow-x: hidden; !* Disable horizontal scroll *!*/
+/*  !*padding-top: 200px;*!*/
+/*}*/
+
+/*!*.sidenav li {*!*/
+/*!*  padding: 6px 8px 6px 16px;*!*/
+/*!*  text-decoration: none;*!*/
+/*!*  font-size: 25px;*!*/
+/*!*  color: #818181;*!*/
+/*!*  display: block;*!*/
+/*!*}*!*/
+
